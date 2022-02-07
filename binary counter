@@ -49,7 +49,7 @@ break;
 case 7:
 digitalWrite(8,HIGH);
 digitalWrite(7,HIGH);
-digitalWrite(8,HIGH);
+digitalWrite(6,HIGH);
 break;
 case 8:
 digitalWrite(9,HIGH);

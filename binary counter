@@ -1,7 +1,7 @@
 int count=0;
 
 int newcount; void setup()
-
+//sets up the id's for the pins and their functions, noting pin 5 as the pin for the button and pin 6-9 as output pins
 { Serial.begin(9600); pinMode(5,INPUT);
 
 pinMode(6,OUTPUT);
@@ -88,12 +88,13 @@ digitalWrite(8,HIGH);
 digitalWrite(7,HIGH);
 digitalWrite(6,LOW);
 break;
-case 15;
+case 15;                                
 digitalWrite(9,HIGH);
 digitalWrite(8,HIGH);
 digitalWrite(7,HIGH);
 digitalWrite(6,HIGH);
 break;
+// this part just lets the arduino know that it should be ilding with no leds turned on
 default: 
 digitalWrite(6,LOW);
 digitalWrite(7,LOW);

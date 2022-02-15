@@ -12,7 +12,7 @@ int servoControlPin = 6; //Servo control line is connected to pin 6
 
 float pingTime; //time for ping to travel from sensor to target and return
 
-float targetDistance; //Distance to Target in inches
+float targetDistance; //Distance to Target in centimeteres
 
 float speedOfSound = 776.5; //Speed of sound in miles per hour
 
@@ -22,7 +22,7 @@ float speedOfSound = 776.5; //Speed of sound in miles per hour
 int INDEX = 0;
 int VALUE = 0;
 int SUM = 0;
-int READINGS[WINDOW_SIZE];
+int READINGS[WINDOW_SIZE]; //can change the window size for more accurate data
 int AVERAGED = 0;
 
 void setup() {
@@ -37,7 +37,7 @@ void setup() {
 
   LCD.setCursor(0, 0); //Set LCD cursor to upper left corner, column 0, row 0
 
- LCD.print("Current Value, Average:"); //Print Message on First Row
+ LCD.print("Value, Average:"); //Print Message on First Row
 
 }
 
@@ -45,7 +45,7 @@ void loop() {
 
   digitalWrite(trigPin, LOW); //Set trigger pin low
 
-  delayMicroseconds(2000); //Let signal settle
+  delayMicroseconds(200); //Let signal settle
 
   digitalWrite(trigPin, HIGH); //Set trigPin high
 
@@ -67,7 +67,7 @@ void loop() {
 
   LCD.setCursor(0, 1); //Set cursor to first column of second row
 
- // LCD.print(" "); //Print blanks to clear the row
+  LCD.print(" "); //Print blanks to clear the row
 
   LCD.setCursor(0, 1); //Set Cursor again to first column of second row
 

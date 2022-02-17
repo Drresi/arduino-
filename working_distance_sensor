@@ -91,6 +91,12 @@ void loop() {
   LCD.println(AVERAGED);
 
   delay(25);
+
+  Serial.print(targetDistance);
+  Serial.print(" ");
+  Serial.println(AVERAGED);
+
+  
 }
 
 
